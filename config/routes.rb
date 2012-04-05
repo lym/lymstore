@@ -2,7 +2,7 @@ PragDepo::Application.routes.draw do
   resources :products
 
   get 'products/edit'
-   get 'products/show'
+  get 'products/show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
