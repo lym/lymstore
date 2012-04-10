@@ -1,4 +1,6 @@
 PragDepo::Application.routes.draw do
+  resources :orders
+
   resources :line_items
 
   resources :carts
@@ -9,6 +11,10 @@ PragDepo::Application.routes.draw do
 
   get 'products/edit'
   get 'products/show'
+
+  resources :products do
+    get :who_bought, :on => :member
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
