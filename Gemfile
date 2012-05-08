@@ -7,8 +7,10 @@ gem 'will_paginate', '3.0.pre2'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
+group :development do
+  gem 'sqlite3'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -17,6 +19,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass'
+  #gem 'pg'
+  #gem 'thin'
 end
 
 gem 'jquery-rails'
@@ -38,4 +42,13 @@ group :test do
   gem 'turn', '~> 0.8.3', :require => false
 end
 
+group :production do
+	#using thin as the server
+  gem 'pg'
+  gem 'thin'
+end
+
 #gem 'less-rails-bootstrap', '2.0.9'
+
+gem 'heroku'
+gem 'minitest', '2.12.1'

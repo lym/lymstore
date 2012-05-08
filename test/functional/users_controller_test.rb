@@ -3,8 +3,8 @@ require 'test_helper'
 class UsersControllerTest < ActionController::TestCase
   setup do
     @input_attributes = {
-      :name => "sam"
-      :password => "private"
+      :name => "sam",
+      :password => "private",
       :password_confirmation  => "private"
     }
 
@@ -41,7 +41,7 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should update user" do
-    put :update, :id =>  @user.to_param, :user => @input.attributes
+    put :update, :id =>  @user.to_param, :user => @input_attributes
     assert_redirected_to users_path
   end
 
