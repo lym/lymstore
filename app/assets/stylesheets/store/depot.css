@@ -164,7 +164,8 @@ border-top: 1px solid #595;
 /* Styles for the cart in the sidebar */
 #cart, #cart table {
 font-size: smaller;
-color: white;
+/*color: white;*/
+color : black;
 }
 #cart table {
 border-top: 1px dotted #595;
