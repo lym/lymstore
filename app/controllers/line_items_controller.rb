@@ -47,6 +47,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
+         #render :template => 'line_items/create.js.erb'
         format.html { redirect_to(store_url) }
         format.js { @current_item = @line_item }
       
