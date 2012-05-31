@@ -12,7 +12,18 @@
 		<div class ="price_line">
 			<span class ="price"><%= number_to_currency(product.price) %></span>
 			<%= button_to t('.add_html'), line_items_path(:product_id => product), 
-				:remote => true %>
+				:remote => true, :disable_with => 'Adding Product...' %>
 		</div>
 	</div>
 <% end %>
+
+<div class="well">  
+<a href="#" id="example" class="btn btn-danger" rel="popover" data-content="It's so simple to create a tooltop for my website!" data-original-title="Twitter Bootstrap Popover">hover for popover</a>  
+</div>  
+</div>  
+  
+<script>  
+$(function ()  
+{ $("#example").popover();  
+});  
+</script>  
