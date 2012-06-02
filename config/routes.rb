@@ -25,4 +25,6 @@ end
   get 'products/edit'
   get 'products/show'
 
+  get 'cheriamo/index'
+
 end
